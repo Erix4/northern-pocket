@@ -26,7 +26,6 @@ h1{
 #header{
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    position: fixed;
     display: flex;
 }
 
@@ -52,6 +51,27 @@ h1{
 }
 
 #lowerRegion{
-    background-color: red;
-    
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.txarea{
+    color: white;
+}
+
+.txarea h3{
+    font-family: 'Barrio', cursive;
+    font-weight: normal;
+    font-size: 3em;
+}
+
+.txarea p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 1.3em;
+    margin-top: .3em;
 }

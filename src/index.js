@@ -6,7 +6,11 @@ import './index.css';
 function Body(props){
     return (
         <div className="txarea">
-            <p>The fitness gram pacer test is a multistage aerobic capcity test which progressively gets more dificult as it continues.</p>
+            <h3>A Minnesota Film Festival</h3>
+            <p>
+                Thanks for your interest in the Northern Pocket Film Festival, hosted at the University of Minnesota, Twin Cities. <br/><br/>
+                This website is currently under construction. Please come back soon for more information or to submit your film!
+            </p>
         </div>
     )
 }
