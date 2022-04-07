@@ -1,17 +1,45 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Body(props){
+    return (
+        <div className="txarea">
+            <p>The fitness gram pacer test is a multistage aerobic capcity test which progressively gets more dificult as it continues.</p>
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function HeadB(props){
+    return (
+        <div className="headB">
+            <h2>{props.tx}</h2>
+        </div>
+    );
+}
+
+class App extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    //
+    render(){
+        return (
+            <div className="App">
+                <div id="header">
+                    <h1>The Northern Pocket</h1>
+                    {/*<HeadB tx="About"/>
+                    <HeadB tx="Submit"></HeadB>
+                    <HeadB tx="Meet us!"></HeadB>*/}
+                </div>
+                <div id="lowerRegion">
+                    <Body/>
+                </div>
+            </div>
+        );
+    }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
