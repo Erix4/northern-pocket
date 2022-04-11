@@ -78,3 +78,20 @@ h1{
     font-size: 1.3em;
     margin-top: .3em;
 }
+
+.filmButton{
+    margin-top: 2em;
+    margin-left: 35%;
+    width: 30%;
+}
+
+@media all and (min-width:0px) and (max-width: 800px) {
+    .filmButton{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .txarea p{
+        font-size: 1em;
+    }
+  }
