@@ -20,7 +20,8 @@ body{
 }
 
 h1{
-    color: aliceblue;
+    color: white;
+    font-weight: normal;
     font-family: 'Barrio', cursive;
     font-size: 4em;
     margin-left: 10px;
@@ -39,7 +40,7 @@ h1{
 }
 
 .headB h2{
-    color: aliceblue;
+    color: white;
     font-family: 'Barrio', cursive;
     font-size: 2em;
     margin-top: auto;
