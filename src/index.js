@@ -58,3 +58,7 @@ class App extends React.Component{
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.getElementById("favicon").href = "/faviconW.ico";//adjust icon if browser is in dark mode
+}
