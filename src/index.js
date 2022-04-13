@@ -1,6 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import {Helmet} from "react-helmet";
 import './index.css';
 
 function FilmButton(props){
@@ -42,6 +43,22 @@ class App extends React.Component{
     render(){
         return (
             <div className="App">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <html lang="en-US"></html>
+                    <meta name="author" content="Eric Patton" />
+                    <title>Northern Pocket</title>
+                    <meta
+                        name="description"
+                        content="The Northern Pocket is a film festival based at the University of Minnesota, Twin Cities.
+                        You can find out more and enter your submission here!"
+                    />
+                    {/*<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"/>*/}
+                    <meta property="og:description" content="The Northern Pocket is a film festival based at the University of Minnesota, Twin Cities.
+                        You can find out more and enter your submission here!"/>
+                    <meta property="og:title" content="The Northern Pocket Film Festival"/>
+                    <meta name="twitter:title" content="The Northern Pocket Film Festival"/>
+                </Helmet>
                 <div id="header">
                     <h1>The Northern Pocket</h1>
                     {/*<HeadB tx="About"/>
