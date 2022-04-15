@@ -4,9 +4,21 @@ import ReactDOM from 'react-dom';
 import {Helmet} from "react-helmet";
 import './index.css';
 
+//initialize analytics
+import ReactGA from 'react-ga';
+const TRACKING_ID = "UA-59709427-2"; //tracking id
+ReactGA.initialize(TRACKING_ID);
+
+function submitClicked(){
+    ReactGA.event({
+        category: 'User',
+        action: 'Clicked Submit Button',
+    });  
+}
+
 function FilmButton(props){
     return (
-        <a href="https://filmfreeway.com/festivals/66443?utm_campaign=The+Northern+Pocket+Film+Festival&utm_medium=External&utm_source=Submission+Button" target="_blank" title="Click to submit on FilmFreeway">
+        <a onClick={submitClicked} href="https://filmfreeway.com/festivals/66443?utm_campaign=The+Northern+Pocket+Film+Festival&utm_medium=External&utm_source=Submission+Button" target="_blank" title="Click to submit on FilmFreeway">
             <img className="filmButton" src="https://storage.googleapis.com/filmfreeway-assets/submission_buttons/v2/sm_submission_btn@2x-sky-gradient.png" title="Click to submit on FilmFreeway"/>
         </a>
     );
