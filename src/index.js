@@ -8,6 +8,7 @@ import './index.css';
 import ReactGA from 'react-ga';
 const TRACKING_ID = "UA-59709427-2"; //tracking id
 ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function submitClicked(){
     ReactGA.event({
