@@ -15,7 +15,7 @@ body{
 .App{
     width: 100vw;
     height: 100vh;
-    background-image: url('/assets/spotty.jpg');
+    background-image: url('./assets/spotty.jpg');
     background-position-y: 50px;
 }
 
@@ -61,6 +61,7 @@ h1{
     left: 10%;
     margin-top: 2em;
     padding: 2em;
+    padding-bottom: 0.4em;
 }
 
 .txarea{
@@ -82,14 +83,32 @@ h1{
 
 .filmButton{
     margin-top: 2em;
+    margin-bottom: 2em;
     margin-left: 35%;
     width: 30%;
+    display: block;
+}
+
+.buttonImage{
+    width: 100%;
+    border-radius: .3em;
+}
+
+#eventLink{
 }
 
 @media all and (min-width:0px) and (max-width: 800px) {
+    h1{
+        font-size: 3em;
+    }
+
+    .txarea h3{
+        font-size: 2.5em;
+    }
+
     .filmButton{
-        width: 90%;
         margin-left: 5%;
+        width: 90%;
     }
 
     .txarea p{

@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import {Helmet} from "react-helmet";
 import './index.css';
 
+import EventbriteImg from "./assets/eventbriteLogo4.png";
+
 //initialize analytics
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga';//migrate this to ga4 with corresponding npm package later
 const TRACKING_ID = "UA-59709427-2"; //tracking id
 ReactGA.initialize(TRACKING_ID);
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -17,10 +19,25 @@ function submitClicked(){
     });  
 }
 
+function eventClicked(){
+    ReactGA.event({
+        category: 'User',
+        action: 'Clicked Eventbrite Button',
+    });  
+}
+
 function FilmButton(props){
     return (
-        <a onClick={submitClicked} href="https://filmfreeway.com/festivals/66443?utm_campaign=The+Northern+Pocket+Film+Festival&utm_medium=External&utm_source=Submission+Button" target="_blank" title="Click to submit on FilmFreeway">
-            <img className="filmButton" src="https://storage.googleapis.com/filmfreeway-assets/submission_buttons/v2/sm_submission_btn@2x-sky-gradient.png" title="Click to submit on FilmFreeway"/>
+        <a className="filmButton" onClick={submitClicked} href="https://filmfreeway.com/festivals/66443?utm_campaign=The+Northern+Pocket+Film+Festival&utm_medium=External&utm_source=Submission+Button" target="_blank" rel="noopener noreferrer" title="Click to submit on FilmFreeway">
+            <img className="buttonImage" src="https://storage.googleapis.com/filmfreeway-assets/submission_buttons/v2/sm_submission_btn@2x-sky-gradient.png" title="Click to submit on FilmFreeway"/>
+        </a>
+    );
+}
+
+function EventBriteButton(props){
+    return (
+        <a id="eventLink" className="filmButton" onClick={eventClicked} href="https://www.eventbrite.com/e/northern-pocket-film-festival-registration-322802469877" target="_blank" rel="noopener noreferrer" title="Click to RSVP on EventBrite">
+            <img className='buttonImage' src={EventbriteImg} title="Click to RSVP on EventBrite"/>
         </a>
     );
 }
@@ -36,6 +53,10 @@ function Body(props){
                 If you're interested in submitting your film, please use the button below!
             </p>
             <FilmButton/>
+            <p>
+                Conversely, if you're interested in attending the event, please RSVP on Eventbrite!
+            </p>
+            <EventBriteButton/>
         </div>
     )
 }
