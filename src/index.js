@@ -48,15 +48,16 @@ function Body(props){
             <h3>A Minnesota Film Festival</h3>
             <p>
                 The Northern Pocket is a Film Festival, hosted at the University of Minnesota, Twin Cities. <br/><br/>
-                The event will be held in the Toaster in the basement of Walter Library at UMN on May 12th.
-                Submissions will be open until May 1st, and accepted by May 7th.
-                If you're interested in submitting your film, please use the button below!
+                The second annual Nothern Pocket will be returning Spring 2023!
+                {/*The event will be held from 4-8PM in the Toaster in the basement of Walter Library at UMN on May 12th.
+                Submissions are now closed. For last minute inquiries, please message <a id='emailLink' href="mailto:northernpocket@gmail.com">northernpocket@gmail.com</a>.*/}
             </p>
-            <FilmButton/>
-            <p>
-                Conversely, if you're interested in attending the event, please RSVP on Eventbrite!
+            <br/>
+            {/*<FilmButton/>*/}
+            {/*<p>
+                <br/>If you're interested in attending the event, please RSVP on Eventbrite!
             </p>
-            <EventBriteButton/>
+            <EventBriteButton/>*/}
         </div>
     )
 }
